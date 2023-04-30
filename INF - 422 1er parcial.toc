@@ -12,7 +12,7 @@
 \contentsline {subsubsection}{\numberline {1.4.4}Implementación de compras en la app}{3}{}%
 \contentsline {subsection}{\numberline {1.5}Tecnología}{3}{}%
 \contentsline {subsubsection}{\numberline {1.5.1}Desarrollo}{3}{}%
-\contentsline {subsubsection}{\numberline {1.5.2}Puesta en marcha}{3}{}%
+\contentsline {subsubsection}{\numberline {1.5.2}Puesta en marcha}{4}{}%
 \contentsline {section}{\numberline {2}Fundamentación teórica}{4}{}%
 \contentsline {subsection}{\numberline {2.1}Pasos para el desarrollo de software}{4}{}%
 \contentsline {subsubsection}{\numberline {2.1.1}Captura de requisitos}{4}{}%
@@ -21,9 +21,11 @@
 \contentsline {subsubsection}{\numberline {2.1.4}Implementación}{4}{}%
 \contentsline {subsubsection}{\numberline {2.1.5}Pruebas}{4}{}%
 \contentsline {subsubsection}{\numberline {2.1.6}Mantenimiento}{4}{}%
-\contentsline {subsection}{\numberline {2.2}Amazon face Rekognition}{4}{}%
+\contentsline {subsection}{\numberline {2.2}Amazon face Rekognition}{5}{}%
 \contentsline {subsection}{\numberline {2.3}Amazon S3}{5}{}%
 \contentsline {subsection}{\numberline {2.4}SCRUM}{5}{}%
 \contentsline {subsubsection}{\numberline {2.4.1}El marco SCRUM}{5}{}%
 \contentsline {subsubsection}{\numberline {2.4.2}Eventos SCRUM}{5}{}%
 \contentsline {subsubsection}{\numberline {2.4.3}Artefactos SCRUM}{6}{}%
+\contentsline {section}{\numberline {3}Modelos}{6}{}%
+\contentsline {subsection}{\numberline {3.1}Modelo de datos}{6}{}%
