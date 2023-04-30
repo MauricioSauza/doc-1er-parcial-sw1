@@ -1,0 +1,227 @@
+\documentclass[a4paper, 12pt]{article}
+
+%Language%
+\usepackage[spanish, es-nodecimaldot]{babel}
+\usepackage[utf8]{inputenc}
+
+%Fonts%
+\usepackage{lmodern}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[T1]{fontenc}
+
+%Geometry%
+\usepackage{geometry}
+\geometry{
+	left= 25mm,
+	right= 25mm,
+	top= 35mm,
+	bottom= 30mm,
+	headheight= 35mm
+}
+
+%Date%
+\usepackage[useregional]{datetime2}
+
+%Color%
+\usepackage{xcolor}
+\definecolor{navy}{RGB}{32,43,68}
+
+%Head%
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+
+%Foot page%
+\lfoot{\small}
+\cfoot{}
+
+%Head page%
+\lhead{UAGRM}
+\rhead{Mauricio Sauza Torrez}
+%\rhead{}
+
+%Images%
+\usepackage{graphicx}
+%\graphicspath{./figuras}
+\usepackage{tikz}
+
+%Variables%
+\newcommand{\titulo}{}
+\newcommand{\fecha}{\DTMDate{2023-05-11}}
+%\newcommand{\author}{Mauricio Sauza Torrez}
+%\newcommand{\linea}{\rule{\linewidth}{0.25mm}}
+%\newcommand{\linea}{\rule{\linewidth}{0.5mm}}
+\begin{document}
+	\begin{titlepage}
+		
+		\thispagestyle{empty}
+		\newcommand{\linea}{\rule{\linewidth}{0.25mm}} 
+		\newcommand{\Linea}{\rule{\linewidth}{0.5mm}}
+		
+		\begin{tikzpicture}[remember picture, overlay]
+			\node[opacity = 0.05, inner sep = 0pt] at (current page.center) {\includegraphics[scale=0.5]{./Recursos/Escudo_FICCT}};
+		\end{tikzpicture}
+		\begin{center}
+			
+			\textbf{\large \textcolor{navy}{UNIVERSIDAD AUTÓNOMA GABRIEL RENÉ MORENO}}\\[1em]
+			\textbf{\textcolor{navy}{FACULTAD DE INGENIERÍA EN CIENCIAS DE LA COMPUTACIÓN Y TELECOMUNICACIONES}}\\[1em]
+			
+			\makeatletter
+			
+			\Linea\\[-1.05em]
+			\linea\\[4em]
+			\textbf{Fecha de Presentación:} \fecha\\[2em]
+			\textbf{\LARGE 1er Parcial}\\[2em]
+			\textbf{\LARGE Plataforma de fotografía para eventos}\\[4em]
+			
+			\linea\\[-1em]
+			\Linea\\[4em]
+			
+			\begin{flushleft}
+				\hspace{3em}\textbf{Nombre:} \textcolor{navy}{Sauza Torrez Mauricio}\\[0.5em]
+				\hspace{3em}\textbf{Registro:} \textcolor{navy}{218050178}\\[0.5em]
+				\hspace{3em}\textbf{Materia:} \textcolor{navy}{Ingeniería de Software 1 (INF-422)}\\[0.5em]
+				\hspace{3em}\textbf{Docente:} \textcolor{navy}{Ing. Rolando Antonio Martinez Canedo}\\[0.5em]
+				\hspace{3em}\textbf{Gestión:} \textcolor{navy}{I-2023}\\[3em]
+			\end{flushleft}
+			
+			
+			\linea\\[-0.98em]
+			\Linea\\[4em]
+			
+			
+			\vfill
+			\textbf{Santa Cruz de la Sierra - Bolivia}
+			
+			
+		\end{center}
+		
+		\begin{flushright}
+			\fecha
+		\end{flushright}
+	\end{titlepage}
+	
+	\clearpage
+	\tableofcontents
+	\section{Perfil}
+		\subsection{Introducción}
+			El mundo ha usado los eventos sociales como rituales para condecorar premios cerrar etapas, llorar perdidas, celebraciones y muchas cosas más.
+			A lo largo del tiempo y con la invención de la fotografía el ser humano encontró la manera de inmortalizar estos momentos a través de estas, ahora que la tecnología a avanzado podemos optimizar el proceso de inmortalización de nuestros recuerdos ya que la difusión de fotografías están echas por profesionales pero el proceso de adquisición y toma de estas fotografías no es el más óptimo.
+			Nuestro objetivo es desarrollar una plataforma que sea capaz de albergar distribuir y comercializar estas fotografías a un público exclusivo de un evento.
+			
+		\subsection{Descripción del problema}
+			Los eventos sociales son generalmente una fuente de recuerdos por lo cuál nosotros queremos crear una forma sencilla en la cuál la gente pueda conseguir fotos suyas en un evento sin la necesidad de buscar a un fotógrafo y tener que pasar por todo un protocolo para sacar y comprar una foto. Esto nos permitirá no tener interrupciones en el evento y a la vez los fotógrafos podrán sacar mejores fotos para posteriormente añadirlas a la plataforma para que la gente pueda ver en que fotos aparece y así poder adquirir dichas fotos.
+		\subsection{Objetivos}
+			\subsubsection{Objetivo General}
+				Desarrollar una plataforma para la difusión de fotos para invitados a eventos sociales con reconocimiento facial. Esto quiere decir que las personas no buscaran entre todas las fotos done aparecen sino que directamente la plataforma será la que les avise en cuantas fotos y en cuales aparece dicha persona y esta podrá comprar las fotos si así lo desea.
+			\subsubsection{Objetivos Específicos}
+				\begin{itemize}
+					\item Crear una plataforma digital para compartir fotos en un evento.
+					\item Lograr que los fotógrafos se enfoquen netamente en su trabajo.
+					\item Permitir a la gente acceder a las fotos de un evento con el reconocimiento facial.
+					\item Usar la plataforma para la compra venta de fotos sin necesidad de tener interacción innecesaria.
+					\item Implementar niveles de seguridad para que los eventos y las fotos estén bien protegidos.
+					\item Permitir comprar fotos en alta calidad con facilidad.
+				\end{itemize}
+		\subsection{Alcance}
+			\subsubsection{Gestionar eventos}
+				El software tiene que ser capaz de crear eventos, invitar personas, contratar fotógrafos y desplegar colecciones de fotografías dentro del evento.
+			\subsubsection{Gestionar usuarios}
+				El software tiene que soportar distintos tipos de usuarios como ser:
+				\begin{itemize}
+				\item Fotógrafo: Este usuario tiene que poder suscribirse a la plataforma para prestar sus servicios.
+				
+				\item Usuario: Este usuario tiene que poder suscribirse subiendo 1 o hasta 3 fotos suyas donde aparezca su cara, esto con el objetivo de que pueda ser reconociendo en los eventos en los que participe.
+				
+				\item Organizador: Este usuario tiene los mismos privilegios que un usuario normal pero también tiene el poder de crear sus propios eventos y contratar fotógrafos para este mismo.
+				\end{itemize}
+			\subsubsection{Gestionar eventos}
+				El software tiene que soportar la visualización de distintos eventos para los usuarios, tiene que ser capaz de aplicar cierta seguridad para que no cualquier usuario pueda ver todos los eventos.
+			\subsubsection{Implementación de compras en la app}
+				La plataforma debería aceptar compras sobre las fotografías de los eventos a las personas invitadas con pagos en QR.
+		\subsection{Tecnología}
+			\subsubsection{Desarrollo}
+				Computadora\#1
+				
+				Tipo: Laptop
+				
+				Procesador: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz 3.11 GHz
+				
+				Memoria RAM: 16,0 GB
+				
+				Almacenamiento: 500 GB M.2
+				
+				Sistema operativo: Windows 11 home
+				
+				\begin{itemize}
+					\item Estrategia de desarrollo: SCRUM
+					\item Lenguaje de modelado: C4, UML
+					\item Control de versiones: Git, Github
+					\item Herramientas case: draw.io, LucidChart
+					\item Herramientas de gestión de proyectos: Trello
+					\item Frameworks:
+						\begin{itemize}
+							\item Backend: Nest.js
+							\item Frontend: Angular
+						\end{itemize}
+					\item Entornos de desarrollo: Visual Studio Code
+					\item Lenguajes de programación: TypeScript, HTML, CSS
+					\item Sistema gestor de base de datos: PostgreSQL 
+				\end{itemize}
+				
+			\subsubsection{Puesta en marcha}
+				A determinar.
+	\section{Fundamentación teórica}
+		\subsection{Pasos para el desarrollo de software}
+			Para el exitoso desarrollo de un proyecto de software se requieren los siguientes pasos:
+			
+			\subsubsection{Captura de requisitos}
+				La captura de requisitos es el paso inicial para el desarrollo del software. Aqui es donde el equipo de desarrollo se reúne con el cliente y delimita el alcance del software a desarrollar.
+			\subsubsection{Análisis}
+				Una vez capturados los requisitos, se procede a hacer el análisis de los mismos, para poder determinar que arquitectura se utilizara, que tecnologías serán las mas adecuadas para el trabajo a realizar y cuanto esfuerzo se requerirá para la misma.
+			\subsubsection{Diseño}
+				Una vez realizado el análisis, el diseño es donde se realizan los modelos para establecer, ya en un lenguaje entendible, como se comportará el software a implementar
+			\subsubsection{Implementación}
+				Este punto es donde ya se procede a la escritura del código fuente, que seguirá los lineamientos realizados en los anteriores pasos.
+			\subsubsection{Pruebas}
+				Las pruebas es donde se verifica si se llegaron a los objetivos trazados o si es que salieron nuevos requisitos o nuevas fronteras para el alcance.
+			\subsubsection{Mantenimiento}
+				Una vez el producto en cuestión se encuentre en un entorno de producción es necesario mantenerlo de manera que este pueda seguir funcionando a través del tiempo y también pudiendo corregir errores y ampliar el sistema.
+		\subsection{Amazon face Rekognition}
+			Rekognition Image es un servicio de reconocimiento de imágenes con tecnología de aprendizaje profundo que detecta objetos, escenas y rostros; extrae texto, reconoce a personas famosas e identifica contenido inapropiado en imágenes. También le permite realizar búsquedas y comparar rostros. Rekognition Image se basa en la misma tecnología de aprendizaje profundo demostrada y altamente escalable desarrollada por los científicos de visión informática de Amazon para analizar miles de millones de imágenes al día para Prime Photos. El servicio devuelve una puntuación de fiabilidad de todos los elementos que identifica para que pueda tomar decisiones bien informadas acerca de cómo utilizar los resultados. Además, todos los rostros detectados se devuelven con coordenadas de un cuadro delimitador, un marco rectangular que abarca todo el rostro y que se puede utilizar para localizar la posición del rostro en la imagen.
+		\subsection{Amazon S3}
+			Amazon Simple Storage Service (Amazon S3) es un servicio de almacenamiento de objetos que ofrece escalabilidad, disponibilidad de datos, seguridad y rendimiento líderes en el sector. Clientes de todos los tamaños y sectores pueden almacenar y proteger cualquier cantidad de datos para prácticamente cualquier caso de uso, como los lagos de datos, las aplicaciones nativas en la nube y las aplicaciones móviles. Gracias a las clases de almacenamiento rentables y a las características de administración fáciles de usar, es posible optimizar los costos, organizar los datos y configurar controles de acceso detallados para cumplir con requisitos empresariales, organizacionales y de conformidad específicos.
+		\subsection{SCRUM}
+			Scrum es un proceso de gestión que reduce la complejidad en el desarrollo de productos para satisfacer las necesidades de los clientes. La gerencia y los equipos de Scrum trabajan juntos alrededor de requisitos y tecnologías para entregar productos funcionando de manera incremental usando el empirismo.
+			Scrum es un marco de trabajo simple que promueve la colaboración en los equipos para lograr desarrollar productos complejos. Ken Schwaber y Jeff Sutherland han escrito La Guía Scrum para explicar Scrum de manera clara y simple.
+			\subsubsection{El marco SCRUM}
+				Scrum es simple, no es una gran colección de partes y componentes obligatorios definidos de manera prescriptiva. Scrum no es una metodología, Scrum está basado en un modelo de proceso empírico. con respeto a las personas y basado en la auto-organización de los equipos para lidiar con lo imprevisible y resolver problemas complejos inspeccionando y adaptando
+				continuamente.
+			\subsubsection{Eventos SCRUM}
+				Los eventos de Scrum se utilizan para minimizar la necesidad de reuniones no definidas en Scrum y establecer una cadencia que permita al equipo fomentar la comunicación y colaboración reduciendo el tiempo en reuniones extensas además de reducir los procesos restrictivos y predictivos. Todos los eventos tienen una caja de tiempo o “TimeBox”. Una vez que se inicia un Sprint este tiene una duración fija y no se puede acortar o alargar. Los siguientes
+				eventos pueden terminar siempre que se logre el propósito del evento, pero dentro de la caja de tiempo y asegurando el fomento de la transparencia.
+				
+				Los eventos de SCRUM son los siguientes:
+				
+				\begin{itemize}
+					\item Sprint 
+					\item Sprint Planning
+					\item Daily Scrum
+					\item Sprint review
+					\item Sprint retrospective
+				\end{itemize}
+			\subsubsection{Artefactos SCRUM}
+				Los artefactos de Scrum formas para proveer transparencia y oportunidades de inspección y adaptación. Los artefactos definidos por Scrum están específicamente definidos para fomentar la transparencia de la información de tal manera que todos tengan el mismo entendimiento
+				de lo que se está llevando a cabo a través de los artefactos.
+				
+				Los artefactos de SCRUM son:
+				
+				\begin{itemize}
+					\item Product backlog 
+					\item Sprint Backlog
+					\item Increment
+				\end{itemize}
+
+\end{document}
